@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhà sách online</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <!-- Begin nav -->
+            <ul id="nav">
+                <li><a href="">Trang Chủ</a></li>
+                <li><a href="">Giới Thiệu</a></li>
+                <li><a href="">Sách Mới</a></li>
+                <li><a href="">Hỗ Trợ</a></li>
+                <li>
+                    <a href="">
+                        Thể Loại Sách
+                        <i class="ti-angle-down"></i>
+                    </a>
+                    <ul class="subnav">
+                        <li><a href="">Sách Giáo Khoa</a></li>
+                        <li><a href="">Truyện Tranh</a></li>
+                        <li><a href="">Thể Thao</a></li>
+                        <li><a href="">Văn Hóa</a></li>
+                        <li><a href="">Kinh Tế</a></li>
+                        <li><a href="">Ẩm Thực</a></li>
+                    </ul>
+                </li>
+                <li><a href="/html/register.html" onclick="">Đăng Ký/ Đăng Nhập</a></li>
+            </ul>
+            <!-- End nav -->
+            <!-- Begin search -->
+            <div title="Tìm kiếm sách" class="btn-search">
+                <i class="ti-search"></i>
+            </div>
+            <!-- End search -->
+        </div>
+
+        <div class="wrapper">
+      <div class="sidebar">
+        <div class="profile">
+          <img src="/assets/img/avatarNTQ.jpg" alt="avatar" />
+          <h3>Nguyễn Trọng Quý</h3>
+          <p>Admin</p>
+        </div>
+
+        <div class="w3-bar-block " style="width:170px">
+            <h5 class="menu-item" style="margin-left: 15px; font-weight: 500; font-size: 18px;">Menu</h5>
+            <button class="tablink" onclick="openTab(event, 'tab-home')"><i class="ti-home icon"></i>Trang chủ</button>
+            <button class="tablink" onclick="openTab(event, 'tab-book')"><i class="ti-book icon"></i>Kho sách</button>
+            <button class="tablink" onclick="openTab(event, 'tab-update')"><i class="ti-settings icon"></i>Cập nhật</button>
+            <button class="tablink" onclick="openTab(event, 'tab-libra')"><i class="ti-user icon"></i>Thủ thư</button>
+            <button class="tablink" onclick="openTab(event, 'tab-reader')"><i class="ti-user icon"></i>Đọc giả</button>
+            <button class="tablink" onclick="openTab(event, 'tab-invoi')"><i class="ti-clipboard icon"></i>Phiếu mượn</button>
+          </div>
+      </div>
+      <div class="section">
+        <div id="content">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="ti-menu" id="openMenu"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Tab Home -->
+            <div id="tab-home" class="tab">
+              <div w3-include-html="./html/tab/homeBook_tab.html"></div>
+            </div>
+            <!-- Tab Book Store -->
+            <div id="tab-book" class="w3-container tab" style="display:none">
+              <div w3-include-html="./html/tab/bookStore_tab.html"></div>
+            </div>
+            <!-- Tab Update Book -->
+            <div id="tab-update" class="w3-container tab" style="display:none">
+              <div w3-include-html="./html/tab/updateBook_tab.html"></div>   
+            </div>
+            <!-- Tab Librarian -->
+            <div id="tab-libra" class="w3-container tab" style="display:none">
+              <h2>Tokyo</h2>
+              <p>Tokyo is the capital of Japan.</p>
+              <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p> 
+            </div>
+            <!-- Tab Reader -->
+            <div id="tab-reader" class="w3-container tab" style="display:none">
+              <h2>Paris</h2>
+              <p>Paris is the capital of France.</p> 
+              <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
+            </div>
+            <!-- Tab Invoice -->
+            <div id="tab-invoi" class="w3-container tab" style="display:none">
+              <h2>Tokyo</h2>
+              <p>Tokyo is the capital of Japan.</p>
+              <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+            </div> 
+        </div>
+    </div>
+    
+    </div>
+
+        
+
+        <div id="footer">
+
+        </div>
+    </div>
+    <script src="js/openTab.js"></script>
+    <script>
+      w3IncludeHTML();
+    </script>
+      
+</body>
+</html>

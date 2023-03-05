@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/updateBook_tab.css">
+    <link rel="stylesheet" href="/assets/font/themify-icons/themify-icons.css">
+</head>
+<body>
+    <div class="container">
+        <form class="content" action="">
+            <label class="label" for="nameBook"><b>Tên sách</b><i style="color: red;">*</i></label>
+            <input class="text_upd" style="width: 100%;" type="text" name="nameBook" id="nameBook" placeholder="Nhập tên sách" required>
+
+            <label class="label" for="cover_image"><b>Thêm ảnh bìa</b><i style="color: red;">*</i></label>
+            <input type="file" id="cover_image" name="cover_image" accept="image/png, image/jpeg">
+
+            <label class="label" for="book-type"><b>Thể loại</b><i style="color: red;">*</i></label>
+                <select class="text_upd" name="book-type" id="book-type">
+                    <option value="vanhoc">Văn học</option>label    
+                    <option value="kinhte">Kinh tế</option>
+                    <option value="xahoi">Xã hội</option>
+                    <option value="truyen">Truyện tranh</option>
+                    <option style="display: none;" selected>-Chọn thể loại-</option>
+                </select>
+                
+
+                <label class="label" for="description"><b>Mô tả</b></label>
+                <textarea class="textarea_upd" rows="10" name="description" id="description"></textarea>
+
+                <label class="label" for="author"><b>Tác giả</b><i style="color: red;">*</i></label>
+                <input class="text_upd" type="text" name="author" id="author" placeholder="Nhập tên tác giả" required> 
+                         
+            
+                <label class="label" for="publisher"><b>Nhà xuất bản</b></label>
+                <input class="text_upd" type="text" name="publisher" id="publisher" placeholder="Nhập nhà xuất bản" required>
+              
+            
+                <label class="label" for="publish_date"><b>Ngày xuất bản</b></label>
+                <input type="datetime-local" id="publish_date" name="publish_date" > 
+            
+                <label class="label" for="pageNumber"><b>Số trang</b><i style="color: red;">*</i></label>
+                <input type="number" name="pageNumber" id="pageNumber" placeholder="Nhập số trang" required>
+                 
+            
+                <label class="label" for="price"><b>Giá tiền <i>(VND)</i></b><i style="color: red;">*</i></label>
+                <input type="number" name="price" id="price" placeholder="Nhập giá tiền của sách" required>
+
+                <input class="btn-addBook" type="submit" value="Thêm">
+                <input class="btn-resetBook" type="reset" value="Đặt lại">
+        </form>             
+    </div>
+    <script>
+        var curDate = new Date();
+        // // Giờ hiện tại
+        // var curHour = curDate.getHours();
+
+        // // Phút hiện tại
+        // var curMinute = curDate.getMinutes();
+
+        // //  Giây hiện tại
+        // var curSeconds = curDate.getSeconds();
+          
+        // Ngày hiện tại
+        var curDay = curDate.getDate();
+     
+        // Tháng hiện tại
+        var curMonth = curDate.getMonth() + 1;
+          
+        // Năm hiện tại
+        var curYear = curDate.getFullYear();
+     
+        // Gán vào thẻ HTML
+        document.getElementById('today').innerHTML = curDay + "/" + curMonth + "/" + curYear;
+    </script>
+</body>
+</html>

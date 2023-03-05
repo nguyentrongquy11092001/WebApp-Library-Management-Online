@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/sidebar.css" />
+    <link rel="stylesheet" href="/assets/font/themify-icons/themify-icons.css">
+    <title>Sidebar</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="sidebar">
+        <div class="profile">
+          <img src="/assets/img/avatarNTQ.jpg" alt="avatar" />
+          <h3>Nguyễn Trọng Quý</h3>
+          <p>Admin</p>
+        </div>
+        <ul>
+          <li>
+            <a href="#" class="active">
+              <span class="icon"><i class="ti-home"></i></span>
+              <span class="item">Trang chủ</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="ti-book"></i></span>
+              <span class="item">Kho sách</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="ti-settings"></i></span>
+              <span class="item">Cập nhật</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="ti-user"></i></span>
+              <span class="item">Thủ thư</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="ti-user"></i></span>
+              <span class="item">Đọc giả</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="ti-clipboard"></i></span>
+              <span class="item">Phiếu mượn</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="section">
+        <div class="top_navbar">
+            <div class="hamburger">
+                <a href="#">
+                    <i class="ti-menu"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function(){
+            document.querySelector("body").classList.toggle("active");
+        })
+    </script>
+  </body>
+</html>
